@@ -11,30 +11,32 @@ Project Organization
     ├── README.md          <- The top-level README for data scientists using this project.
     ├── data
     │   ├── external       <- Data from third party sources.
-    │   ├── processed      <- The final data. Clean/engineered/canonical data sets for modeling.
+    │   ├── processed      <- The final data. Clean/engineered/canonical data sets for modeling
+    │   ├── queries        <- SQL statements for connections.
     │   └── raw            <- The original, immutable data dump.
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── notebooks          <- Jupyter notebooks. Naming convention is a number with a zero on the left (for ordering),
+    │                         the creator's initials, underscore plus delimited description, e.g.
+    │                         `01_dsf_exploratory_data_analysis`.
     │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics/plots/figures to be used in reporting
+    │   └── plots          <- Generated graphics/plots/figures to be used in reporting/slides
     │
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
+    ├── src                <- Source code for use in this project
     │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
+    │   ├── connections    <- Redshift connections
+    │   ├── utils          <- Python functions used in the notebooks
+    │   ├── data           <- Scripts to download/generate data
     │   │   └── make_dataset.py
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
