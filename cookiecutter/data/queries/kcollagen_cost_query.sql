@@ -1,3 +1,6 @@
+WITH PARAMS AS (
+    SELECT to_date('%s', 'YYYY-MM-DD') start_date
+)
 SELECT
     DATE(mc.created_at) AS date,
     mc.product_id,
@@ -11,10 +14,11 @@ SELECT
 FROM
     kb.membership_created AS mc
 LEFT JOIN kb.user_registered ur ON ur.user_id = mc.user_id
-LEFT JOIN kb.products p ON p.id = mc.product_id
+LEFT JOIN kb.products p ON p.id = mc.product_id,
+params
 WHERE
     mc.product_id IN (8, 9, 10)
-    AND mc.created_at >= '2021-04-01 00:00:00'
+    AND mc.created_at >= params.start_date
     AND ur.email NOT LIKE '%%@teamcmp.com'
     AND ur.email NOT LIKE '%%@moarmarketing.com'
 GROUP BY

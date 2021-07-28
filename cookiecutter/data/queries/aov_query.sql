@@ -1,3 +1,6 @@
+WITH PARAMS AS (
+    SELECT to_date('%s', 'YYYY-MM-DD') start_date
+)
 SELECT
     DATE(mc.created_at) AS date,
     (CASE
@@ -14,9 +17,10 @@ LEFT JOIN kb.user_registered ur ON
 LEFT JOIN etl.currency_conversions cc ON
     (DATE(cc.date_cest) = (DATE(mc.created_at))
     AND (DATE_PART(hour, mc.created_at) = cc.hour_cest)
-    AND (cc.currency = mc.currency))
+    AND (cc.currency = mc.currency)),
+params
 WHERE
-    mc.created_at >= '{START_DATE}'
+    mc.created_at >= params.start_date
     AND ur.email NOT LIKE '%%@teamcmp.com'
     AND ur.email NOT LIKE '%%@moarmarketing.com'
 GROUP BY
