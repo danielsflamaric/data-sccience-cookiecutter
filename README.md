@@ -9,7 +9,7 @@ Requirements
 
 Python 2.7 or 3.5
 
-[cookiecutter Python package](https://pypi.org/project/cookiecutter/) >= 1.4.0: `<pip install cookiecutter>`
+[cookiecutter Python package](https://pypi.org/project/cookiecutter/) >= 1.4.0: `pip install cookiecutter`
 
 
 Project Organization
