@@ -12,6 +12,14 @@ Python 2.7 or 3.5
 [cookiecutter Python package](https://pypi.org/project/cookiecutter/) >= 1.4.0: `pip install cookiecutter`
 
 
+Starting a new project
+------------
+
+Run this command line, answer a few questions, and cookiecutter will automatically create the directory.
+
+`cookiecutter https://github.com/danielsflamaric/data-science-mc-cookiecutter.git`
+
+
 Project Organization
 ------------
 
