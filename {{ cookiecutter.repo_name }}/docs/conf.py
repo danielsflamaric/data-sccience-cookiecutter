@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# cookiecutter-datascience documentation build configuration file, created by
+# {{ cookiecutter.repo_name }}-datascience documentation build configuration file, created by
 # sphinx-quickstart.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -41,7 +41,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'cookiecutter-datascience'
+project = u'{{ cookiecutter.repo_name }}-datascience'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -184,8 +184,8 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
     ('index',
-     'cookiecutter.tex',
-     u'cookiecutter-datascience Documentation',
+     '{{ cookiecutter.repo_name }}.tex',
+     u'{{ cookiecutter.repo_name }}-datascience Documentation',
      u"mad-collective-ds", 'manual'),
 ]
 
@@ -215,7 +215,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'cookiecutter', u'cookiecutter-datascience Documentation',
+    ('index', '{{ cookiecutter.repo_name }}', u'{{ cookiecutter.repo_name }}-datascience Documentation',
      [u"mad-collective-ds"], 1)
 ]
 
@@ -229,8 +229,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    ('index', 'cookiecutter', u'cookiecutter-datascience Documentation',
-     u"mad-collective-ds", 'cookiecutter-datascience',
+    ('index', '{{ cookiecutter.repo_name }}', u'{{ cookiecutter.repo_name }}-datascience Documentation',
+     u"mad-collective-ds", '{{ cookiecutter.repo_name }}-datascience',
      'Template for Data Science projects', 'Miscellaneous'),
 ]
 
