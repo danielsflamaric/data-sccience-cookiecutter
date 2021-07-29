@@ -1,7 +1,15 @@
-cookiecutter-datascience
+cookiecutter-madcollective-datascience
 ==============================
 
 Template for Data Science projects
+
+
+Requirements
+------------
+
+Python 2.7 or 3.5
+cookiecutter Python package >= 1.4.0: pip install cookiecutter
+
 
 Project Organization
 ------------
